@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Jonathan Postrado",
+      "username": "athan",
+      "email": "athan@gmail.com",
+      "phone": "09123456789",
+      "location": "Philippines",
+      "status": "Single",
+      "id": 1
+    },
+    {
+      "name": "Daniel Padilla",
+      "username": "dj",
+      "email": "dj@gmail.com",
+      "phone": "09123456700",
+      "location": "Philippines",
+      "status": "Married",
+      "id": 2
+    }
+  ]
+}

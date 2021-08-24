@@ -1,0 +1,4 @@
+To run server:
+    - npm run server 
+    (it will run the json-server package and automatically load the db-user.json file inside the server-database folder)
+
