@@ -1,11 +1,8 @@
+import React from "react";
+
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-import { AddUser } from "./components/AddUser/AddUser";
-import { EditUser } from "./components/EditUser/EditUser";
-import { UserList } from "./components/UserList/UserList";
-import Home from "./components/Homepage/Home";
-import React from "react";
-import Navbar from "./components/NavigationBar/Navbar";
+import Wrapper from "./Wrapper";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
@@ -14,24 +11,12 @@ export default function App() {
     <Router>
       <div>
         <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
-        </Switch>
-        <Navbar />
-        <Switch>
-          <PrivateRoute path="/addUser">
-            <AddUser />
-          </PrivateRoute>
-          <PrivateRoute path="/editUser">
-            <EditUser />
-          </PrivateRoute>
-          <PrivateRoute path="/userList">
-            <UserList />
-          </PrivateRoute>
+          <Route path="/login">
+            <Login />
+          </Route>
           <PrivateRoute path="/">
-            <Home />
-          </PrivateRoute>
+            <Wrapper />
+          </PrivateRoute>          
         </Switch>
       </div>
     </Router>

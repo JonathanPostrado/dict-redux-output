@@ -60,7 +60,7 @@ export function EditUser() {
   };
 
   return (
-    <div class="overflow-hidden relative flex items-center min-h-screen bg-gradient-to-r from-blue-300 to-blue-600">
+    <div class="overflow-hidden relative flex items-center h-screen bg-gradient-to-r from-blue-300 to-blue-600 detail">
       <div class="absolute inset-x-auto w-full z-10">
         <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
           <div class="relative py-3 sm:max-w-xl sm:mx-auto">

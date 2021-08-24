@@ -11,6 +11,7 @@ export function UserList() {
   const loading = useSelector((state) => state.loading);
 
   const handleSearch = (e) => {
+    console.log(e.target.value)
     setFilter(e.target.value)
   }
 
@@ -20,7 +21,7 @@ export function UserList() {
 
   return (
 
-    <div class="container mx-auto py-6 px-4">
+    <div class="mx-auto py-20 px-20 bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500 h-screen w-full">
       <h1 class="text-3xl py-4 border-b mb-10">User Information List</h1>
       <div class="mb-4 flex justify-between items-center">
         <div class="flex-1 pr-4">
@@ -65,7 +66,22 @@ export function UserList() {
 					</tr>
 				</thead>
         <tbody>
-          {usersInfo.filter(user => (filter==="")?true:user.toString().toLowerCase().includes(filter.toLowerCase()))
+          {usersInfo.filter(user =>
+            (filter==="")
+            ?
+            true
+            :
+            user.name.toLowerCase().includes(filter.toLowerCase())
+            ||
+            user.username.toLowerCase().includes(filter.toLowerCase())
+            ||
+            user.email.toLowerCase().includes(filter.toLowerCase())
+            ||
+            user.phone.toLowerCase().includes(filter.toLowerCase())
+            ||
+            user.location.toLowerCase().includes(filter.toLowerCase())
+            ||
+            user.status.toLowerCase().includes(filter.toLowerCase()))
           .map(({ id, name, username, email, phone, location, status}, i) => (
 
             <tr key={i}>
@@ -113,6 +129,7 @@ export function UserList() {
           )}
 		</div>
   </div>
- 
   );
 }
+
+export default UserList;

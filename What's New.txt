@@ -1,4 +1,14 @@
-To run server:
+- Search Function is now working.
+- Login Redirections is now fixed.
+
+
+
+- To run server:
     - npm run server 
     (it will run the json-server package and automatically load the db-user.json file inside the server-database folder)
 
+
+
+
+Project by Jonathan Postrado
+for DICT (ReactJS Redux Training)
